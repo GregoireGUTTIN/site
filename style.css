@@ -1,0 +1,108 @@
+body
+{
+font-family:comic sans ms; 
+background-color:#F5A9A9;
+color:#FA5858;
+font-size:18;
+}
+
+h1
+{
+font-family:"comic sans ms";
+color:#FA5858;
+font-size:20;
+}
+
+a {color:#FA5858;}
+/*a:visited {color:#DB7093;}*/
+a:hover {color: #FA5858; }
+/*a:active { color:#000000;}*/
+
+img.coeur{
+margin-left:10px;
+border:0;
+width:15px;
+}
+
+/*-----------Mise en forme boutons---------------#98B3F3--#1923AE----*/
+
+#Accueil img {display: none;}
+#Accueil{
+  display: block;
+  width:180px;
+  height:40px;
+  background-image:url(images/Accueil_0.png);
+}
+#Accueil:hover {
+  background-image:url(images/Accueil_1.png);
+} 
+
+#Liste img {display: none;}
+#Liste{
+  display: block;
+  width:180px;
+  height:40px;
+  background-image:url(images/Liste_0.png);
+}
+#Liste:hover {
+  background-image:url(images/Liste_1.png);
+} 
+
+#Contact img {display: none;}
+#Contact{
+  display: block;
+  width:180px;
+  height:40px;
+  background-image:url(images/Contact_0.png);
+}
+#Contact:hover {
+  background-image:url(images/Contact_1.png);
+} 
+
+#Album img {display: none;}
+#Album{
+  display: block;
+  width:180px;
+  height:40px;
+  background-image:url(images/Album_0.png);
+}
+#Album:hover {
+  background-image:url(images/Album_1.png);
+} 
+
+/*-----------Mise en forme lien------------------------*/
+a.bouton, 
+button.bouton { 
+    display:-moz-inline-box; 
+    display:inline-block; 
+    margin:1px; 
+    padding:0; 
+	color:#cc0033;
+    white-space:nowrap; 
+    /*text-align:center; */
+    vertical-align:middle; 
+    cursor:pointer; 
+    border:0; 
+    background:none; 
+} 
+a.bouton span, 
+button.bouton span { 
+    position:relative; 
+    height:40px;
+	width:180px;
+	float:left;
+    padding:8px 0 0 0;
+	vertical-align:middle; 
+    background:url(images/bouton.png) left top no-repeat; 
+} 
+
+a.bouton span:hover, 
+button.bouton span:hover { 
+    position:relative; 
+	height:40px;
+	width:180px;
+    float:left; 
+    padding:8px 0 0 0; 
+    vertical-align:middle; 
+    background:url(images/bouton_hover.png) left top no-repeat; 
+} 

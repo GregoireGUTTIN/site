@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<link type="text/css" href="style.css" rel="stylesheet" media="screen" />
+<title>Contactez-nous</title> 
+<script language="Javascript">
+// ==================
+//	Activations - Désactivations
+// ==================
+function GereControle(Controleur, Controle, Masquer) {
+var objControleur = document.getElementById(Controleur);
+var objControle = document.getElementById(Controle);
+	if (Masquer=='1')
+		objControle.style.visibility=(objControleur.checked==true)?'visible':'hidden';
+	else
+		objControle.disabled=(objControleur.checked==true)?false:true;
+	return true;
+}
+
+function AjoutPiece(Controle, Masquer) {
+var objControle = document.getElementById(Controle);
+	if (objControle.style.visibility == 'visible')
+		objControle.style.visibility='hidden';
+	else
+		objControle.style.visibility='visible';
+	return true;
+}
+
+function VerifMail()
+{
+	a = document.envoie.mail.value;
+	valide1 = false;
+	
+	
+	for(var j=1;j<(a.length);j++){
+		if(a.charAt(j)=='@'){
+			if(j<(a.length-4)){
+				for(var k=j;k<(a.length-2);k++){
+					if(a.charAt(k)=='.') valide1=true;
+				}
+			}
+		}
+	}
+	if(valide1==false) 
+	{
+		document.envoie.OK.disabled = true;
+	}
+	else 
+	{
+		document.envoie.OK.disabled = false;
+	}
+	
+	return valide1;
+}
+
+</script>
+
+
+</head>
+<body onLoad="GereControle('piece_joint','image', '1');">
+
+<table width="100%">
+
+	  <tr>
+		   <td>
+			<img src="images/Coccinelles.gif" width=350/>
+		   </td>
+		  <!-- <td style="padding-left: 50px">
+			<form method=POST action='envoyer.php' ENCTYPE="multipart/form-data" name="envoie">
+			  Entrez votre prénom :
+			  <input name="prenom" type="text" value="Prénom" onFocus="this.select()"/>
+			  <br>	 
+			  Entrez votre nom :
+			  <input name="nom" type="text" value="Nom" onFocus="this.select()"/>
+			  <br>
+			  Entrez votre e-mail :
+			  <input name="mail" type="text" value="e-mail" onchange="VerifMail()"/>
+			  <br>
+			  Entrez votre message :<br>
+			  <textarea name="message" type="text" rows="7" cols="60" onFocus="this.select()">Message</textarea>
+			  <!-- <br>
+			  Entrez votre pièce jointe :
+			  <input id="piece_joint" name="piece_joint" type="checkbox" onClick="GereControle('piece_joint','image', '1');" 
+										onLoad="GereControle('piece_joint','image', '1');" UNCHECKED/>
+			  <input id="image" name="image" type="file" accept="image/jpeg" style="visibility:hidden"/>
+			  
+			  <br>
+			  <input type=submit value="Envoyer" DISABLED name="OK"/>
+			</form>
+		    </td>
+		    <td>
+			&nbsp;
+		    </td>
+	    </tr>
+	    <tr>-->
+		    <td>
+			&nbsp;
+	 	    </td>
+		    <td width=90%>
+
+			<center>
+				<h1> Contactez-nous ! </h1></center>
+				<li>A l'adresse électronique :
+					<a href="mailto:cecilegregoire@live.fr?subject=Photos mariage">cecilegregoire@live.fr</a></li>
+				<li>ou à l'adresse postale :</li>
+					9, route du Peillet <br>
+					38110 Dolomieu 
+				<li>ou au numéro de téléphone : 09.50.88.95.94</li>
+			
+		    </td>
+		    <td>
+			<img src="images/empreinte.png" width=120/>
+		    </td>
+	    </tr>
+</table>
+</font>
+</body>
+</html>
